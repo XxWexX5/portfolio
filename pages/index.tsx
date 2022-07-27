@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Portfolio - Wevison</title>
         <meta name="description" content="Portfolio - Wevison" />
-        <meta property="og:description" content="Portfolio - Wevison" />
+        <meta property="og:description" content="Front-end Developer" />
         <meta property="og:title" content="Portfolio - Wevison" />
         <meta property="og:type" content="portfolio" />
         <meta property="og:image" content="/images/coffee.png" />
