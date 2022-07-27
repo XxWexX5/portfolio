@@ -33,14 +33,13 @@ export function Header({ links }: HeaderProps) {
           <a
             href="/data/resume.pdf"
             target="_blank"
-            className="container-image"
+            className={styles.containerImage}
           >
             <Image
               src="/images/avatar.png"
               alt="Avatar"
               className="avatar"
-              width={100}
-              height={93}
+              layout="fill"
             />
           </a>
         </nav>
