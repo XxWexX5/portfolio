@@ -10,7 +10,12 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Portfolio - Wevison</title>
-        <meta name="description" content="Porfolio - Wevison R." />
+        <meta name="description" content="Portfolio - Wevison" />
+        <meta property="og:description" content="Portfolio - Wevison" />
+        <meta property="og:title" content="Portfolio - Wevison" />
+        <meta property="og:type" content="portfolio" />
+        <meta property="og:image" content="/images/coffee.png" />
+        <meta property="og:url" content="https://www.wevison.dev" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
 
