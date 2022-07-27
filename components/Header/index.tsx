@@ -36,7 +36,7 @@ export function Header({ links }: HeaderProps) {
             className="container-image"
           >
             <Image
-              src="/avatar.png"
+              src="/images/avatar.png"
               alt="Avatar"
               className="avatar"
               width={100}
