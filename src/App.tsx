@@ -1,14 +1,18 @@
 import { FaBeer } from "react-icons/fa";
 
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Hello world!
-      </h1>
-
-      <FaBeer />
-    </>
+    <NavigationMenu.Root>
+      <NavigationMenu.List>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="https://github.com/radix-ui">
+            Github
+          </NavigationMenu.Link>
+        </NavigationMenu.Item>
+      </NavigationMenu.List>
+    </NavigationMenu.Root>
   );
 }
 
