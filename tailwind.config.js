@@ -15,7 +15,9 @@ export default {
           500: '#E1376C',
         },
         secondary: {
+          100: '#9E75CE',
           500: '#532FB8',
+          700: '#532EB8'
         },
         tertiary: {
           500: '#FECA90',
