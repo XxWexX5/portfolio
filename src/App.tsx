@@ -15,7 +15,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 function App() {
   return (
     <>
-      <h1 className="font-raleway">Titulo</h1>
+      <h1 className="font-raleway text-neutral-50">Titulo</h1>
       <p>sou um texto</p>
     </>
   );
