@@ -1,6 +1,12 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import { gql, useQuery } from "@apollo/client";
+
+import { useRive } from "@rive-app/react-canvas";
+
+import Spinner from "@/components/Spinner";
 
 const GET_DATA = gql`
   query getData {
@@ -121,13 +127,42 @@ const GET_DATA = gql`
   }
 `;
 
-export default function Home() {
-  const { data, loading, error } = useQuery(GET_DATA);
+const STATE_MACHINE_NAME = "State Machine 1";
 
-  if (loading) return <p>Carregando...</p>;
-  if (error) return <p>Erro: {error.message}</p>;
+export default function Home() {
+  const { RiveComponent } = useRive({
+    src: "images/character-we.riv",
+    stateMachines: STATE_MACHINE_NAME,
+    autoplay: true,
+  });
+
+  const { data, loading, error } = useQuery(GET_DATA);
+  const [showContent, setShowContent] = useState(false);
 
   console.log(data);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowContent(true);
+    }, 10000);
+
+    return () => clearTimeout(timeout);
+  }, [loading]);
+
+  if (loading || !showContent)
+    return (
+      <div className="flex flex-col items-center justify-center h-screen bg-[#532FB8]">
+        <div style={{ width: "100%", height: "100%" }}>
+          <RiveComponent />
+        </div>
+
+        <div className="absolute bottom-20 left-0 right-0">
+          <Spinner />
+        </div>
+      </div>
+    );
+
+  if (error) return <p>Erro: {error.message}</p>;
 
   return <p className="text-red-500">Hello World</p>;
 }
