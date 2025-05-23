@@ -142,9 +142,16 @@ export default function Home() {
   console.log(data);
 
   useEffect(() => {
+    const STORAGE_LOADED = localStorage.getItem("loaded");
+
+    if (STORAGE_LOADED) {
+      return setShowContent(true);
+    }
+
     const timeout = setTimeout(() => {
+      localStorage.setItem("loaded", "1");
       setShowContent(true);
-    }, 10000);
+    }, 6000);
 
     return () => clearTimeout(timeout);
   }, [loading]);
