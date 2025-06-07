@@ -171,5 +171,10 @@ export default function Home() {
 
   if (error) return <p>Erro: {error.message}</p>;
 
-  return <p className="text-red-500">Hello World</p>;
+  return (
+    <>
+      <div className="w-full h-screen bg-red-500"></div>
+      <div className="w-full h-screen bg-blue-500"></div>
+    </>
+  );
 }
