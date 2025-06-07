@@ -14,6 +14,7 @@
   --neutral-100: #2B2B2B;
   --neutral-50: #1C1C1C;
 
+  --primary-800: #9E75CE;
   --primary-500: #532FB8;
 
   --secondary-500: #E1376C;
@@ -22,9 +23,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
+  --font-raleway: var(--font-raleway-sans);
+  --font-rubik: var(--font-rubik-sans);
+  
   --color-neutral-full: var(--neutral-full);
   --color-neutral-950: var(--neutral-950);  
   --color-neutral-900: var(--neutral-900);
@@ -38,6 +39,7 @@
   --color-neutral-100: var(--neutral-100);
   --color-neutral-50: var(--neutral-50);
   
+  --color-primary-800: var(--primary-800);
   --color-primary-500: var(--primary-500);
 
   --color-secondary-500: var(--secondary-500);
@@ -46,7 +48,7 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-primary-800);
+  color: var(--color-primary-500);
   font-family: Arial, Helvetica, sans-serif;
 }
