@@ -2,132 +2,16 @@
 
 import { useState, useEffect } from "react";
 
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 
 import { useRive } from "@rive-app/react-canvas";
 
 import Spinner from "@/components/Spinner";
 
-const GET_DATA = gql`
-  query getData {
-    navigationLinks {
-      links {
-        id
-        label
-        url
-        target
-        isActived
-      }
-    }
-    logos {
-      image {
-        name
-        url
-      }
-      title
-      url
-    }
-    heroes {
-      me
-      title
-      description
-    }
-    buttonCtas {
-      label
-    }
-    introductions {
-      preTitle
-      title
-      subtitle
-      description
-      clientLogos {
-        name
-        url
-      }
-    }
-    skillsShowcases {
-      image {
-        name
-        url
-      }
-      topic {
-        topic
-      }
-    }
-    projectGalleries {
-      image {
-        name
-        url
-      }
-    }
-    contactLinks {
-      title
-      contacts {
-        id
-        platform
-        displayText
-        link
-        type
-        icon {
-          name
-          url
-        }
-      }
-    }
-    experienceSections {
-      title
-      subtitle
-      description
-      items {
-        id
-        role
-        company
-        period
-        description
-        technologies {
-          id
-          technologie
-        }
-        descriptionClient
-        clients {
-          id
-          client
-        }
-      }
-    }
-    educationSections {
-      title
-      items {
-        id
-        course
-        institution
-        period
-        description
-      }
-    }
-    languageSkills {
-      title
-      languages {
-        id
-        name
-        level
-      }
-    }
-    quickAccessIcons {
-      icons {
-        icon {
-          name
-          url
-        }
-        label
-        actionType
-        value
-      }
-    }
-  }
-`;
-
 const STATE_MACHINE_NAME = "State Machine 1";
+
+import { GET_DATA } from "@/api";
+import { Navigation } from "@/components/Navigation";
 
 export default function Home() {
   const { RiveComponent } = useRive({
@@ -138,8 +22,6 @@ export default function Home() {
 
   const { data, loading, error } = useQuery(GET_DATA);
   const [showContent, setShowContent] = useState(false);
-
-  console.log(data);
 
   useEffect(() => {
     const STORAGE_LOADED = localStorage.getItem("loaded");
@@ -173,8 +55,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-screen bg-red-500"></div>
-      <div className="w-full h-screen bg-blue-500"></div>
+      <Navigation links={data?.navigationLinks?.[0]?.links} />
     </>
   );
 }
