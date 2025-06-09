@@ -12,6 +12,7 @@ const STATE_MACHINE_NAME = "State Machine 1";
 
 import { GET_DATA } from "@/api";
 import { Navigation } from "@/components/Navigation";
+import { Logo } from "@/components/Logo";
 
 export default function Home() {
   const { RiveComponent } = useRive({
@@ -55,7 +56,17 @@ export default function Home() {
 
   return (
     <>
-      <Navigation links={data?.navigationLinks?.[0]?.links} />
+      <div className="bg-primary-800 py-4 px-6">
+        <div className="container mx-auto ">
+          <div className="flex items-center justify-between">
+            <Navigation links={data?.navigationLinks?.[0]?.links} />
+
+            <div className="relative size-16">
+              <Logo />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

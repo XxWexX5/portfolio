@@ -52,18 +52,20 @@ export const Navigation = ({ links }: NavigationProps) => {
 
   return (
     <>
-      {!isMenuActived && (
+      {!isMenuActived ? (
         <button
           className="md:hidden text-neutral-full hover:text-primary-500 transition-all cursor-pointer w-fit"
           onClick={() => setIsMenuActived(!isMenuActived)}
         >
           <CiMenuFries size={32} />
         </button>
+      ) : (
+        <button></button>
       )}
 
       <ul
         ref={menuRef}
-        className={`top-0 left-0 fixed flex-col gap-16 bg-primary-500 w-full max-w-[45%] h-screen items-center justify-center md:hidden flex ${
+        className={`z-50 top-0 left-0 fixed flex-col gap-16 bg-primary-500 w-full max-w-[45%] h-screen items-center justify-center md:hidden flex ${
           isMenuActived && "animate-openMenu"
         } ${!isMenuActived && isHandleActionActived && "animate-closeMenu"}`}
       >
