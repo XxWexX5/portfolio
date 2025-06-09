@@ -22,6 +22,59 @@
   --tertiary-500: #FECA90;
 }
 
+@theme {
+  --animate-fadeInDot: fadeInDot .5s ease-in-out forwards;
+
+  @keyframes fadeInDot {
+    0% {
+      transform: translateX(-20px) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  --animate-openMenu: openMenu .5s ease-in-out forwards;
+
+  @keyframes openMenu {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  --animate-closeMenu: closeMenu .5s ease-in-out forwards;
+
+  @keyframes closeMenu {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  
+  --animate-showLinks: showLinks 1s ease-in-out forwards;
+
+  @keyframes showLinks {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 @theme inline {
   --font-raleway: var(--font-raleway-sans);
   --font-rubik: var(--font-rubik-sans);
