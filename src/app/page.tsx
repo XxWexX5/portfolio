@@ -62,7 +62,10 @@ export default function Home() {
             <Navigation links={data?.navigationLinks?.[0]?.links} />
 
             <div className="relative size-16">
-              <Logo />
+              <Logo
+                name={data?.logos[0].image.name}
+                url={data?.logos[0].image.url}
+              />
             </div>
           </div>
         </div>
