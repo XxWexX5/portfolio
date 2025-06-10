@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div className="py-4 px-6 space-y-12">
       <div className="bg-primary-800">
-        <div className="container mx-auto ">
+        <div className="container mx-auto">
           <div className="flex items-center justify-between">
             <Navigation links={data?.navigationLinks?.[0]?.links} />
 
@@ -73,7 +73,9 @@ export default function Home() {
       </div>
 
       <div className="bg-primary-800">
-        <Hero />
+        <div className="container mx-auto">
+          <Hero />
+        </div>
       </div>
     </div>
   );
