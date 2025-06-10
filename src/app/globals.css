@@ -78,6 +78,7 @@
 @theme inline {
   --font-raleway: var(--font-raleway-sans);
   --font-rubik: var(--font-rubik-sans);
+  --font-yeseva: var(--font-yeseva-sans);
   
   --color-neutral-full: var(--neutral-full);
   --color-neutral-950: var(--neutral-950);  
