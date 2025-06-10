@@ -4,26 +4,21 @@ import { useState, useEffect } from "react";
 
 import { useQuery } from "@apollo/client";
 
-import { useRive } from "@rive-app/react-canvas";
-
 import Spinner from "@/components/Spinner";
-
-const STATE_MACHINE_NAME = "State Machine 1";
 
 import { GET_DATA } from "@/api";
 import { Navigation } from "@/components/Navigation";
 import { Logo } from "@/components/Logo";
 import { Hero } from "@/components/Hero";
+import { RiveComponent } from "@/components/RiveComponent";
+import { Toggle } from "@/components/Toggle";
+
+import { MdError } from "react-icons/md";
 
 export default function Home() {
-  const { RiveComponent } = useRive({
-    src: "images/character-we.riv",
-    stateMachines: STATE_MACHINE_NAME,
-    autoplay: true,
-  });
-
   const { data, loading, error } = useQuery(GET_DATA);
   const [showContent, setShowContent] = useState(false);
+  const [isActivedLanguage, setIsActivedLanguage] = useState(true);
 
   useEffect(() => {
     const STORAGE_LOADED = localStorage.getItem("loaded");
@@ -53,7 +48,22 @@ export default function Home() {
       </div>
     );
 
-  if (error) return <p>Erro: {error.message}</p>;
+  if (error)
+    return (
+      <div className="w-screen h-screen flex flex-col justify-end p-[6rem] items-center">
+        <div className="flex flex-col justify-center text-center items-center gap-4 md:flex-row">
+          <MdError color="#FFFFFF" size={32} />
+
+          <h2 className="font-bold text-2xl text-neutral-full">
+            Ops! Parece que aconteceu algum erro.
+          </h2>
+        </div>
+
+        <div className="absolute w-screen h-screen translate-y-[3rem]">
+          <RiveComponent />
+        </div>
+      </div>
+    );
 
   return (
     <div className="py-4 px-6 space-y-12">
@@ -62,11 +72,20 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <Navigation links={data?.navigationLinks?.[0]?.links} />
 
-            <div className="relative size-16">
-              <Logo
-                name={data?.logos[0].image.name}
-                url={data?.logos[0].image.url}
-              />
+            <div className="flex items-center gap-8">
+              <div className="w-[6rem]">
+                <Toggle
+                  isActivedLanguage={isActivedLanguage}
+                  setIsActivedLanguage={setIsActivedLanguage}
+                />
+              </div>
+
+              <div className="relative size-16">
+                <Logo
+                  name={data?.logos[0].image.name}
+                  url={data?.logos[0].image.url}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -74,7 +93,10 @@ export default function Home() {
 
       <div className="bg-primary-800">
         <div className="container mx-auto">
-          <Hero />
+          <Hero
+            title={data?.heroes[0].title}
+            description={data?.heroes[0].description}
+          />
         </div>
       </div>
     </div>

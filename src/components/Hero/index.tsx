@@ -1,7 +1,12 @@
 import { LetsTask } from "@/components/LetsTask";
 import { RiveComponent } from "../RiveComponent";
 
-export function Hero() {
+interface HeroProps {
+  title: string;
+  description: string;
+}
+
+export function Hero({ title, description }: HeroProps) {
   function Shape() {
     return (
       <svg
@@ -52,8 +57,8 @@ export function Hero() {
     <>
       <div className="lg:hidden">
         <div className="-space-y-1">
-          <h1 className="font-yeseva text-3xl">Front End</h1>
-          <h2 className="font-yeseva text-6xl">Developer</h2>
+          <h1 className="font-yeseva text-3xl">{title}</h1>
+          <h2 className="font-yeseva text-6xl">{description}</h2>
         </div>
 
         <div className="w-full h-[30rem] -translate-y-15 -mb-32">
@@ -75,11 +80,11 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="hidden lg:block py-[8rem]">
-        <div className="w-full max-w-[38rem] mx-auto relative">
+      <div className="hidden lg:block py-[7rem]">
+        <div className="w-full max-w-[48rem] mx-auto relative">
           <Shape />
 
-          <div className="w-full h-[32rem] -translate-y-20 -mb-32 absolute top-0 bottom-0 left-0 right-0 m-auto">
+          <div className="w-full h-[40rem] -translate-y-13 -mb-32 absolute top-0 bottom-0 left-0 right-0 m-auto">
             <div
               style={{
                 width: "100%",
@@ -93,17 +98,17 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="w-full max-w-[20rem] absolute -top-[20%] -left-[30%]">
+          <div className="w-full max-w-[20rem] absolute -top-[20%] -left-[20%]">
             <Arrow />
           </div>
 
-          <div className="relative scale-60 top-[-16rem] left-[50%]">
+          <div className="relative scale-75 top-[-18rem] left-[50%]">
             <LetsTask />
           </div>
 
-          <div className="absolute top-[20%] bottom-0 -left-[33%] rotate-270 m-auto flex flex-col justify-center">
-            <h1 className="font-yeseva text-3xl">Front End</h1>
-            <h2 className="font-yeseva text-6xl uppercase">Developer</h2>
+          <div className="absolute top-[15%] bottom-0 -left-[30.5%] rotate-270 m-auto flex flex-col justify-center">
+            <h1 className="font-yeseva text-3xl">{title}</h1>
+            <h2 className="font-yeseva text-7xl uppercase">{description}</h2>
           </div>
         </div>
       </div>

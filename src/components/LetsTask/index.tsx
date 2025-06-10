@@ -47,7 +47,7 @@ export function LetsTask() {
             </text>
           </svg>
 
-          <div className="group-hover:translate-x-[.3rem] transition-all">
+          <div className="group-hover:translate-x-[.8rem] transition-all ease-in duration-200">
             <BsArrowRight size={48} />
           </div>
         </div>
