@@ -18,6 +18,7 @@ const rubikSans = Rubik({
 
 const yesevaSans = Yeseva_One({
   variable: "--font-yeseva-sans",
+  subsets: ["latin"],
   weight: "400",
 });
 
