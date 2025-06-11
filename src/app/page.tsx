@@ -16,6 +16,9 @@ import { WhoIAm } from "@/components/WhoIAm";
 
 import { MdError } from "react-icons/md";
 
+import { SkillsShowcase } from "./components/SkillsShowcase";
+import Image from "next/image";
+
 export default function Home() {
   const { data, loading, error } = useQuery(GET_DATA);
   const [showContent, setShowContent] = useState(false);
@@ -51,7 +54,7 @@ export default function Home() {
 
   if (error)
     return (
-      <div className="w-screen h-screen flex flex-col justify-end p-[6rem] items-center">
+      <div className="w-screen h-screen bg-primary-800 flex flex-col justify-end p-[6rem] items-center">
         <div className="flex flex-col justify-center text-center items-center gap-4 md:flex-row">
           <MdError color="#FFFFFF" size={32} />
 
@@ -111,6 +114,203 @@ export default function Home() {
             clientLogos={data?.introductions[0].clientLogos}
           />
         </div>
+      </div>
+
+      <div className="py-12 space-y-6">
+        <SkillsShowcase
+          classNameWrapper="bg-pink-200"
+          classNameAnimation="animate-slideLeft"
+        >
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+          >
+            {data?.skillsShowcases[0]?.topic[0]?.topic}
+          </h2>
+
+          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+            <Image
+              src={data?.skillsShowcases[0].image.url}
+              alt={data?.skillsShowcases[0].image.name}
+              width={data?.skillsShowcases[0].image.width}
+              height={data?.skillsShowcases[0].image.height}
+              className="scale-70 object-contain shadow-xl"
+            />
+          </div>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+          >
+            {data?.skillsShowcases[0]?.topic[1]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+          >
+            {data?.skillsShowcases[0]?.topic[2]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+          >
+            {data?.skillsShowcases[0]?.topic[3]?.topic}
+          </h2>
+        </SkillsShowcase>
+
+        <SkillsShowcase
+          classNameWrapper="bg-[#FFF5CE]"
+          classNameAnimation="animate-slideRight"
+        >
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+          >
+            {data?.skillsShowcases[1]?.topic[0]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+          >
+            {data?.skillsShowcases[1]?.topic[1]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+          >
+            {data?.skillsShowcases[1]?.topic[2]?.topic}
+          </h2>
+
+          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+            <Image
+              src={data?.skillsShowcases[1].image.url}
+              alt={data?.skillsShowcases[1].image.name}
+              width={data?.skillsShowcases[1].image.width}
+              height={data?.skillsShowcases[1].image.height}
+              className="scale-70 object-contain shadow-xl"
+            />
+          </div>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+          >
+            {data?.skillsShowcases[1]?.topic[3]?.topic}
+          </h2>
+        </SkillsShowcase>
+
+        <SkillsShowcase
+          classNameWrapper="bg-[#C0C0C0]"
+          classNameAnimation="animate-slideLeft"
+        >
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+          >
+            {data?.skillsShowcases[2]?.topic[0]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+          >
+            {data?.skillsShowcases[2]?.topic[1]?.topic}
+          </h2>
+
+          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+            <Image
+              src={data?.skillsShowcases[2].image.url}
+              alt={data?.skillsShowcases[2].image.name}
+              width={data?.skillsShowcases[2].image.width}
+              height={data?.skillsShowcases[2].image.height}
+              className="scale-70 object-contain shadow-xl"
+            />
+          </div>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+          >
+            {data?.skillsShowcases[2]?.topic[2]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+          >
+            {data?.skillsShowcases[2]?.topic[3]?.topic}
+          </h2>
+        </SkillsShowcase>
+
+        <SkillsShowcase
+          classNameWrapper="bg-[#B9D9FF]"
+          classNameAnimation="animate-slideRight"
+        >
+          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+            <Image
+              src={data?.skillsShowcases[3].image.url}
+              alt={data?.skillsShowcases[3].image.name}
+              width={data?.skillsShowcases[3].image.width}
+              height={data?.skillsShowcases[3].image.height}
+              className="scale-70 object-contain shadow-xl"
+            />
+          </div>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+          >
+            {data?.skillsShowcases[3]?.topic[0]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+          >
+            {data?.skillsShowcases[3]?.topic[1]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+          >
+            {data?.skillsShowcases[3]?.topic[2]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+          >
+            {data?.skillsShowcases[3]?.topic[3]?.topic}
+          </h2>
+        </SkillsShowcase>
+
+        <SkillsShowcase
+          classNameWrapper="bg-[#B7FFB1]"
+          classNameAnimation="animate-slideRight"
+        >
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+          >
+            {data?.skillsShowcases[4]?.topic[0]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+          >
+            {data?.skillsShowcases[4]?.topic[1]?.topic}
+          </h2>
+
+          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+            <Image
+              src={data?.skillsShowcases[4].image.url}
+              alt={data?.skillsShowcases[4].image.name}
+              width={data?.skillsShowcases[4].image.width}
+              height={data?.skillsShowcases[4].image.height}
+              className="scale-75 object-contain shadow-xl"
+            />
+          </div>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+          >
+            {data?.skillsShowcases[4]?.topic[2]?.topic}
+          </h2>
+
+          <h2
+            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+          >
+            {data?.skillsShowcases[4]?.topic[3]?.topic}
+          </h2>
+        </SkillsShowcase>
       </div>
     </div>
   );

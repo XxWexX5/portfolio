@@ -43,6 +43,8 @@ export const GET_DATA = gql`
       image {
         name
         url
+        width
+        height
       }
       topic {
         topic
