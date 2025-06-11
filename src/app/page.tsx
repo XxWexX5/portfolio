@@ -18,6 +18,7 @@ import { MdError } from "react-icons/md";
 
 import { SkillsShowcase } from "./components/SkillsShowcase";
 import Image from "next/image";
+import PortfolioGrid from "@/components/PortfolioGrid";
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_DATA);
@@ -311,6 +312,10 @@ export default function Home() {
             {data?.skillsShowcases[4]?.topic[3]?.topic}
           </h2>
         </SkillsShowcase>
+      </div>
+
+      <div className="py-12 space-y-6">
+        <PortfolioGrid images={data?.projectGalleries[0].image} />
       </div>
     </div>
   );
