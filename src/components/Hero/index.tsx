@@ -55,7 +55,7 @@ export function Hero({ title, description }: HeroProps) {
 
   return (
     <>
-      <div className="lg:hidden">
+      <div className="lg:hidden mb-[15rem]">
         <div className="-space-y-1">
           <h1 className="font-yeseva text-3xl">{title}</h1>
           <h2 className="font-yeseva text-6xl">{description}</h2>
@@ -80,7 +80,7 @@ export function Hero({ title, description }: HeroProps) {
         </div>
       </div>
 
-      <div className="hidden lg:block py-[7rem]">
+      <div className="hidden lg:block py-[8.5rem]">
         <div className="w-full max-w-[48rem] mx-auto relative">
           <Shape />
 

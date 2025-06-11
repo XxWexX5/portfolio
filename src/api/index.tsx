@@ -35,6 +35,8 @@ export const GET_DATA = gql`
       clientLogos {
         name
         url
+        width
+        height
       }
     }
     skillsShowcases {

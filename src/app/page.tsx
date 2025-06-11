@@ -12,6 +12,7 @@ import { Logo } from "@/components/Logo";
 import { Hero } from "@/components/Hero";
 import { RiveComponent } from "@/components/RiveComponent";
 import { Toggle } from "@/components/Toggle";
+import { WhoIAm } from "@/components/WhoIAm";
 
 import { MdError } from "react-icons/md";
 
@@ -66,8 +67,8 @@ export default function Home() {
     );
 
   return (
-    <div className="py-4 px-6 space-y-12">
-      <div className="bg-primary-800">
+    <div>
+      <div className="bg-primary-800 py-4 px-6">
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
             <Navigation links={data?.navigationLinks?.[0]?.links} />
@@ -91,11 +92,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-primary-800">
+      <div className="bg-primary-800 py-4 px-6">
         <div className="container mx-auto">
           <Hero
             title={data?.heroes[0].title}
             description={data?.heroes[0].description}
+          />
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-b from-[#9E75CE] via-[#9E75CE]/[0.65] to-[#9E75CE]/0 py-4 px-6">
+        <div className="container mx-auto">
+          <WhoIAm
+            preTitle={data?.introductions[0].preTitle}
+            title={data?.introductions[0].title}
+            subtitle={data?.introductions[0].subtitle}
+            description={data?.introductions[0].description}
+            clientLogos={data?.introductions[0].clientLogos}
           />
         </div>
       </div>

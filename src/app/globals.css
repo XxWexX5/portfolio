@@ -102,7 +102,12 @@
 }
 
 body {
-  background: var(--color-primary-800);
+  background: var(--color-neutral-full);
   color: var(--color-primary-500);
   font-family: var(--font-rubik-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.swiper-wrapper {
+  align-items: center;
 }
