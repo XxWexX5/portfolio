@@ -20,6 +20,8 @@ import { SkillsShowcase } from "./components/SkillsShowcase";
 import Image from "next/image";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Link from "next/link";
+import { Experience } from "@/components/Experience";
+import { Education } from "@/components/Education";
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_DATA);
@@ -342,6 +344,22 @@ export default function Home() {
 
       <div className="py-12 space-y-6">
         <PortfolioGrid galleries={data?.projectGalleries} />
+      </div>
+
+      <div className="py-12 px-6 space-y-6">
+        <div className="container mx-auto flex flex-col gap-20 justify-center md:flex-row md:gap-30">
+          <Experience
+            title={data?.experienceSections[0].title}
+            subtitle={data?.experienceSections[0].subtitle}
+            description={data?.experienceSections[0].description}
+            items={data?.experienceSections[0].items}
+          />
+
+          <Education
+            title={data?.educationSections[0].title}
+            items={data?.educationSections[0].items}
+          />
+        </div>
       </div>
     </div>
   );
