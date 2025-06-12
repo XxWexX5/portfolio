@@ -49,11 +49,17 @@ export const GET_DATA = gql`
       topic {
         topic
       }
+      link
     }
     projectGalleries {
-      image {
-        name
-        url
+      gallery {
+        image {
+          name
+          url
+          width
+          height
+        }
+        link
       }
     }
     contactLinks {

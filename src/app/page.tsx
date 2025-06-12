@@ -19,6 +19,7 @@ import { MdError } from "react-icons/md";
 import { SkillsShowcase } from "./components/SkillsShowcase";
 import Image from "next/image";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import Link from "next/link";
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_DATA);
@@ -128,7 +129,12 @@ export default function Home() {
             {data?.skillsShowcases[0]?.topic[0]?.topic}
           </h2>
 
-          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+          <Link
+            href={data?.skillsShowcases[0].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+          >
             <Image
               src={data?.skillsShowcases[0].image.url}
               alt={data?.skillsShowcases[0].image.name}
@@ -136,7 +142,7 @@ export default function Home() {
               height={data?.skillsShowcases[0].image.height}
               className="scale-70 object-contain shadow-xl"
             />
-          </div>
+          </Link>
 
           <h2
             className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
@@ -179,7 +185,12 @@ export default function Home() {
             {data?.skillsShowcases[1]?.topic[2]?.topic}
           </h2>
 
-          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+          <Link
+            href={data?.skillsShowcases[1].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+          >
             <Image
               src={data?.skillsShowcases[1].image.url}
               alt={data?.skillsShowcases[1].image.name}
@@ -187,7 +198,7 @@ export default function Home() {
               height={data?.skillsShowcases[1].image.height}
               className="scale-70 object-contain shadow-xl"
             />
-          </div>
+          </Link>
 
           <h2
             className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
@@ -212,7 +223,12 @@ export default function Home() {
             {data?.skillsShowcases[2]?.topic[1]?.topic}
           </h2>
 
-          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+          <Link
+            href={data?.skillsShowcases[2].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+          >
             <Image
               src={data?.skillsShowcases[2].image.url}
               alt={data?.skillsShowcases[2].image.name}
@@ -220,7 +236,7 @@ export default function Home() {
               height={data?.skillsShowcases[2].image.height}
               className="scale-70 object-contain shadow-xl"
             />
-          </div>
+          </Link>
 
           <h2
             className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
@@ -239,7 +255,12 @@ export default function Home() {
           classNameWrapper="bg-[#B9D9FF]"
           classNameAnimation="animate-slideRight"
         >
-          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+          <Link
+            href={data?.skillsShowcases[3].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+          >
             <Image
               src={data?.skillsShowcases[3].image.url}
               alt={data?.skillsShowcases[3].image.name}
@@ -247,7 +268,7 @@ export default function Home() {
               height={data?.skillsShowcases[3].image.height}
               className="scale-70 object-contain shadow-xl"
             />
-          </div>
+          </Link>
 
           <h2
             className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
@@ -290,7 +311,12 @@ export default function Home() {
             {data?.skillsShowcases[4]?.topic[1]?.topic}
           </h2>
 
-          <div className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer">
+          <Link
+            href={data?.skillsShowcases[4].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+          >
             <Image
               src={data?.skillsShowcases[4].image.url}
               alt={data?.skillsShowcases[4].image.name}
@@ -298,7 +324,7 @@ export default function Home() {
               height={data?.skillsShowcases[4].image.height}
               className="scale-75 object-contain shadow-xl"
             />
-          </div>
+          </Link>
 
           <h2
             className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
@@ -315,7 +341,7 @@ export default function Home() {
       </div>
 
       <div className="py-12 space-y-6">
-        <PortfolioGrid images={data?.projectGalleries[0].image} />
+        <PortfolioGrid galleries={data?.projectGalleries} />
       </div>
     </div>
   );

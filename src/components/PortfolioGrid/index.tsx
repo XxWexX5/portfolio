@@ -1,32 +1,49 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type ImageType = {
   name: string;
-  url: "string";
+  url: string;
+  width: number;
+  height: number;
 };
 
+type GalleryNodeType = {
+  image: ImageType;
+  link: string;
+};
+
+type GalleryType = {
+  gallery: GalleryNodeType[];
+};
+
+type GalleriesType = GalleryType[];
+
 interface PortfolioGridProps {
-  images: ImageType[];
+  galleries: GalleriesType;
 }
 
-export default function PortfolioGrid({ images }: PortfolioGridProps) {
+export default function PortfolioGrid({ galleries }: PortfolioGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      {images.map((image, index) => {
+      {galleries.map(({ gallery }, index) => {
         return (
           <div key={index} className="overflow-hidden">
-            <div
+            <Link
+              href={gallery[0].link}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`relative md:block h-[32rem] hover:scale-105 transition-transform duration-300 ${
                 index > 2 && "hidden"
               }`}
             >
               <Image
-                src={image.url}
-                alt={image.name}
+                src={gallery[0].image.url}
+                alt={gallery[0].image.name}
                 fill
                 className="object-cover"
               />
-            </div>
+            </Link>
           </div>
         );
       })}
