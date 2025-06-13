@@ -73,6 +73,8 @@ export const GET_DATA = gql`
         icon {
           name
           url
+          width
+          height
         }
       }
     }

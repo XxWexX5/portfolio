@@ -22,6 +22,7 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 import Link from "next/link";
 import { Experience } from "@/components/Experience";
 import { Education } from "@/components/Education";
+import { FindMe } from "@/components/FindMe";
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_DATA);
@@ -358,6 +359,15 @@ export default function Home() {
           <Education
             title={data?.educationSections[0].title}
             items={data?.educationSections[0].items}
+          />
+        </div>
+      </div>
+
+      <div className="py-12 px-6">
+        <div className="container mx-auto">
+          <FindMe
+            title={data?.contactLinks[0].title}
+            contacts={data?.contactLinks[0].contacts}
           />
         </div>
       </div>

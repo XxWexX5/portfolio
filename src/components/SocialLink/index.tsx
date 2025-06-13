@@ -1,0 +1,48 @@
+import Image from "next/image";
+import Link from "next/link";
+
+type SocialLinkProps = {
+  link: {
+    href: string;
+    text: string;
+    type?: string;
+  };
+  image: {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
+};
+
+export function SocialLink({ link, image }: SocialLinkProps) {
+  function SocialType(type?: string, href?: string) {
+    if (type === "email") {
+      return `mailto:${href}`;
+    }
+
+    if (type === "phone") {
+      return `tel:${href}`;
+    }
+
+    return href;
+  }
+
+  return (
+    <Link
+      href={SocialType(link?.type, link?.href) || ""}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-6 text-primary-500 hover:underline mx-auto lg:mx-0 overflow-hidden"
+    >
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+      />
+
+      <span className="hidden text-xl lg:block lg:text-2xl">{link.text}</span>
+    </Link>
+  );
+}
