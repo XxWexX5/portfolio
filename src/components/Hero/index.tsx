@@ -61,7 +61,7 @@ export function Hero({ title, description }: HeroProps) {
           <h2 className="font-yeseva text-6xl">{description}</h2>
         </div>
 
-        <div className="w-full h-[2rem] -translate-y-15 -mb-32">
+        <div className="w-full h-[26rem] -translate-y-15 -mb-32">
           <div
             style={{
               width: "100%",
