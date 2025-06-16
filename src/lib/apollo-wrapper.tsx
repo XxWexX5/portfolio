@@ -2,8 +2,9 @@
 
 import { ApolloProvider } from "@apollo/client";
 import { ReactNode } from "react";
-import { apolloClient } from "./apollo-client";
+import { useApollo } from "./apollo-client"; // isso retorna um client só no client
 
 export function ApolloWrapper({ children }: { children: ReactNode }) {
-  return <ApolloProvider client={apolloClient}>{children}</ApolloProvider>;
+  const client = useApollo(null); // ou passe props se for o caso
+  return <ApolloProvider client={client}>{children}</ApolloProvider>;
 }
