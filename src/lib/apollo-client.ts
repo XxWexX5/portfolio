@@ -7,7 +7,7 @@ let apolloClient: ApolloClient<NormalizedCacheObject>;
 
 function createApolloClient() {
   return new ApolloClient({
-    ssrMode: typeof window === "undefined", // true no servidor (SSG)
+    ssrMode: typeof window === "undefined",
     link: new HttpLink({
       uri: "https://proud-book-588e97a674.strapiapp.com/graphql",
       headers: {

@@ -1,4 +1,3 @@
-// pages/index.tsx
 import { initializeApollo } from "@/lib/apollo-client";
 import { GET_DATA, GET_DATA_PT_BR } from "@/api";
 import Home from "@/components/Home";
@@ -13,7 +12,7 @@ export async function getStaticProps() {
     props: {
       initialApolloState: apolloClient.cache.extract(),
     },
-    revalidate: 60, // ISR: revalida a cada 60 segundos
+    revalidate: 60,
   };
 }
 
