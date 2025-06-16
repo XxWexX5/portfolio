@@ -24,7 +24,7 @@ export function LetsTask() {
       <Link
         href="#find-me"
         className="block absolute w-full group cursor-pointer"
-        onClick={() => scrollToSection("find-me")}
+        onClick={(e) => scrollToSection(e, "find-me")}
       >
         <div className="absolute top-0 left-0 right-0 mx-auto w-65">
           <Shape />
