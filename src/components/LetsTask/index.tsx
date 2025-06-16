@@ -1,3 +1,4 @@
+import { scrollToSection } from "@/utils/scrollToSection";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -20,7 +21,11 @@ function Shape() {
 export function LetsTask() {
   return (
     <div className="relative w-full">
-      <Link href="#" className="block absolute w-full group cursor-pointer">
+      <Link
+        href="#find-me"
+        className="block absolute w-full group cursor-pointer"
+        onClick={() => scrollToSection("find-me")}
+      >
         <div className="absolute top-0 left-0 right-0 mx-auto w-65">
           <Shape />
         </div>

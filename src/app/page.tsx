@@ -75,8 +75,8 @@ export default function Home() {
     );
 
   return (
-    <div>
-      <div className="bg-primary-800 py-4 px-6">
+    <div className="pt-[6rem]">
+      <div className="w-screen bg-primary-800 top-0 py-4 px-6 fixed z-50">
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
             <Navigation links={data?.navigationLinks?.[0]?.links} />
@@ -101,7 +101,7 @@ export default function Home() {
       </div>
 
       <div className="bg-primary-800 py-4 px-6">
-        <div className="container mx-auto">
+        <div className="container mx-auto relative">
           <Hero
             title={data?.heroes[0].title}
             description={data?.heroes[0].description}
@@ -348,7 +348,10 @@ export default function Home() {
       </div>
 
       <div className="py-12 px-6 space-y-6">
-        <div className="container mx-auto flex flex-col gap-20 justify-center md:flex-row md:gap-30">
+        <div
+          id="formation"
+          className="container mx-auto flex flex-col gap-20 justify-center md:flex-row md:gap-30"
+        >
           <Experience
             title={data?.experienceSections[0].title}
             subtitle={data?.experienceSections[0].subtitle}
@@ -359,6 +362,7 @@ export default function Home() {
           <Education
             title={data?.educationSections[0].title}
             items={data?.educationSections[0].items}
+            language={data?.languageSkills[0]}
           />
         </div>
       </div>

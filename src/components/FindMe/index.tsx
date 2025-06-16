@@ -23,7 +23,7 @@ interface FindMeProps {
 
 export function FindMe({ title, contacts }: FindMeProps) {
   return (
-    <div className="space-y-12">
+    <div id="find-me" className="space-y-12">
       <h2 className="w-fit font-yeseva text-5xl text-primary-500 relative after:content-[''] after:absolute after:left-23 after:-bottom-1 after:w-[75%] after:h-px after:bg-primary-500">
         {title}
       </h2>

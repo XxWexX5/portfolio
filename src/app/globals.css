@@ -123,6 +123,10 @@
   --color-tertiary-500: var(--tertiary-500);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-neutral-full);
   color: var(--color-primary-500);

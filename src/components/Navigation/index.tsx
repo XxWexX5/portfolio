@@ -1,5 +1,6 @@
 "use client";
 
+import { scrollToSection } from "@/utils/scrollToSection";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -24,7 +25,7 @@ export const Navigation = ({ links }: NavigationProps) => {
   const menuRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMenuActived(false);
         setIsHandleActionActived(true);
@@ -32,9 +33,11 @@ export const Navigation = ({ links }: NavigationProps) => {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, []);
 
@@ -65,7 +68,7 @@ export const Navigation = ({ links }: NavigationProps) => {
 
       <ul
         ref={menuRef}
-        className={`z-50 top-0 left-0 fixed flex-col gap-16 bg-primary-500 w-full max-w-[45%] h-screen items-center justify-center md:hidden flex ${
+        className={`max-w-min px-[4rem] z-50 top-0 left-0 fixed flex-col gap-16 bg-primary-500 w-full h-screen items-center justify-center md:hidden flex ${
           isMenuActived && "animate-openMenu"
         } ${!isMenuActived && isHandleActionActived && "animate-closeMenu"}`}
       >
@@ -83,7 +86,8 @@ export const Navigation = ({ links }: NavigationProps) => {
                   : "text-primary-800"
               }
             `}
-              onClick={() => {
+              onClick={(e) => {
+                scrollToSection(e, link?.url);
                 setIsMenuActived(!isMenuActived);
                 setIsHandleActionActived(true);
               }}
@@ -102,7 +106,8 @@ export const Navigation = ({ links }: NavigationProps) => {
         {links.map((link) => (
           <li key={link.id} className="text-neutral-full text-base">
             <Link
-              href={`#${link.url}`}
+              href=""
+              onClick={(e) => scrollToSection(e, link?.url)}
               className={`relative hover:text-primary-500 transition-all cursor-pointer
               ${
                 activeHash === `#${link.url}`

@@ -55,13 +55,13 @@ export function Hero({ title, description }: HeroProps) {
 
   return (
     <>
-      <div className="lg:hidden mb-[15rem]">
+      <div id="about-me" className="lg:hidden mb-[15rem]">
         <div className="-space-y-1">
           <h1 className="font-yeseva text-3xl">{title}</h1>
           <h2 className="font-yeseva text-6xl">{description}</h2>
         </div>
 
-        <div className="w-full h-[30rem] -translate-y-15 -mb-32">
+        <div className="w-full h-[25rem] -translate-y-15 -mb-32">
           <div
             style={{
               width: "100%",
@@ -69,6 +69,8 @@ export function Hero({ title, description }: HeroProps) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              position: "absolute",
+              zIndex: -1,
             }}
           >
             <RiveComponent />
