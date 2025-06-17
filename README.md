@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 Portfólio Profissional — Wevison Ramalho
+![image](https://github.com/user-attachments/assets/8ec1a935-8751-40a8-852e-9786df6ea3f2)
 
-## Getting Started
+Este é o repositório do meu portfólio como Desenvolvedor Front-End e Designer de UI/UX. Reuni aqui meus principais projetos, experiências e habilidades, apresentados com uma interface moderna, acessível e responsiva.
 
-First, run the development server:
+## ✨ Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Sou um desenvolvedor front-end e designer de UI/UX com sólida formação em programação e design. Meu foco é criar soluções limpas, escaláveis e orientadas a resolver problemas reais de forma eficiente.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este portfólio foi desenvolvido com tecnologias modernas, tanto no front-end quanto no back-end, visando performance, manutenibilidade e uma ótima experiência do usuário.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** – Framework React com foco em performance e renderização híbrida
+- **Tailwind CSS** – Utilitário CSS para estilização moderna e responsiva
+- **GraphQL** – Comunicação flexível e eficiente com a API
+- **Strapi CMS** – Gerenciamento de conteúdo headless, facilitando atualizações e escalabilidade
 
-## Learn More
+## 🚀 Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- Animeção com Rive;
+- Design 100% responsivo e acessível;
+- Animações sutis e interações agradáveis;
+- Integração dinâmica com CMS para gerenciamento de conteúdo;
+- Deploy otimizado para web performance;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🖼️ Demonstração
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Você pode visualizar o portfólio ao vivo [clicando aqui](https://portfolio-red-tau-19.vercel.app/).
