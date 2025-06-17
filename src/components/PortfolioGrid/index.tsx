@@ -37,8 +37,8 @@ export default function PortfolioGrid({ galleries }: PortfolioGridProps) {
               href={gallery[0].link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`relative lg:block h-[32rem] hover:scale-105 transition-transform duration-300 ${
-                index > 2 && "hidden"
+              className={`relative block h-[32rem] hover:scale-105 transition-transform duration-300 ${
+                index > 2 && "hidden lg:block"
               }`}
             >
               <Image

@@ -128,7 +128,7 @@ html {
 }
 
 body {
-  background: var(--color-neutral-full);
+  background: var(--color-primary-800);
   color: var(--color-primary-500);
   font-family: var(--font-rubik-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;

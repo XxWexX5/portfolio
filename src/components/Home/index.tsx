@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from "react";
 import { MdError } from "react-icons/md";
@@ -104,270 +106,272 @@ export default function Home({ data, dataPTbr }: any) {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-[#9E75CE] via-[#9E75CE]/[0.65] to-[#9E75CE]/0 py-4 px-6">
-        <div className="container mx-auto">
-          <WhoIAm
-            preTitle={translation()?.introductions[0].preTitle}
-            title={translation()?.introductions[0].title}
-            subtitle={translation()?.introductions[0].subtitle}
-            description={translation()?.introductions[0].description}
-            clientLogos={translation()?.introductions[0].clientLogos}
-          />
+      <div className="bg-neutral-full">
+        <div className="bg-gradient-to-b from-[#9E75CE] via-[#9E75CE]/[0.65] to-[#9E75CE]/0 py-4 px-6">
+          <div className="container mx-auto">
+            <WhoIAm
+              preTitle={translation()?.introductions[0].preTitle}
+              title={translation()?.introductions[0].title}
+              subtitle={translation()?.introductions[0].subtitle}
+              description={translation()?.introductions[0].description}
+              clientLogos={translation()?.introductions[0].clientLogos}
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="py-12 space-y-6">
-        <SkillsShowcase
-          classNameWrapper="bg-pink-200"
-          classNameAnimation="animate-slideLeft"
-        >
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+        <div className="py-12 space-y-6">
+          <SkillsShowcase
+            classNameWrapper="bg-pink-200"
+            classNameAnimation="animate-slideLeft"
           >
-            {translation()?.skillsShowcases[0]?.topic[0]?.topic}
-          </h2>
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            >
+              {translation()?.skillsShowcases[0]?.topic[0]?.topic}
+            </h2>
 
-          <Link
-            href={translation()?.skillsShowcases[0].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+            <Link
+              href={translation()?.skillsShowcases[0].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+            >
+              <Image
+                src={translation()?.skillsShowcases[0].image.url}
+                alt={translation()?.skillsShowcases[0].image.name}
+                width={translation()?.skillsShowcases[0].image.width}
+                height={translation()?.skillsShowcases[0].image.height}
+                className="scale-70 object-contain shadow-xl"
+              />
+            </Link>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            >
+              {translation()?.skillsShowcases[0]?.topic[1]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            >
+              {translation()?.skillsShowcases[0]?.topic[2]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            >
+              {translation()?.skillsShowcases[0]?.topic[3]?.topic}
+            </h2>
+          </SkillsShowcase>
+
+          <SkillsShowcase
+            classNameWrapper="bg-[#FFF5CE]"
+            classNameAnimation="animate-slideRight"
           >
-            <Image
-              src={translation()?.skillsShowcases[0].image.url}
-              alt={translation()?.skillsShowcases[0].image.name}
-              width={translation()?.skillsShowcases[0].image.width}
-              height={translation()?.skillsShowcases[0].image.height}
-              className="scale-70 object-contain shadow-xl"
-            />
-          </Link>
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+            >
+              {translation()?.skillsShowcases[1]?.topic[0]?.topic}
+            </h2>
 
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+            >
+              {translation()?.skillsShowcases[1]?.topic[1]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+            >
+              {translation()?.skillsShowcases[1]?.topic[2]?.topic}
+            </h2>
+
+            <Link
+              href={translation()?.skillsShowcases[1].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+            >
+              <Image
+                src={translation()?.skillsShowcases[1].image.url}
+                alt={translation()?.skillsShowcases[1].image.name}
+                width={translation()?.skillsShowcases[1].image.width}
+                height={translation()?.skillsShowcases[1].image.height}
+                className="scale-70 object-contain shadow-xl"
+              />
+            </Link>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
+            >
+              {translation()?.skillsShowcases[1]?.topic[3]?.topic}
+            </h2>
+          </SkillsShowcase>
+
+          <SkillsShowcase
+            classNameWrapper="bg-[#C0C0C0]"
+            classNameAnimation="animate-slideLeft"
           >
-            {translation()?.skillsShowcases[0]?.topic[1]?.topic}
-          </h2>
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+            >
+              {translation()?.skillsShowcases[2]?.topic[0]?.topic}
+            </h2>
 
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+            >
+              {translation()?.skillsShowcases[2]?.topic[1]?.topic}
+            </h2>
+
+            <Link
+              href={translation()?.skillsShowcases[2].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+            >
+              <Image
+                src={translation()?.skillsShowcases[2].image.url}
+                alt={translation()?.skillsShowcases[2].image.name}
+                width={translation()?.skillsShowcases[2].image.width}
+                height={translation()?.skillsShowcases[2].image.height}
+                className="scale-70 object-contain shadow-xl"
+              />
+            </Link>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+            >
+              {translation()?.skillsShowcases[2]?.topic[2]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
+            >
+              {translation()?.skillsShowcases[2]?.topic[3]?.topic}
+            </h2>
+          </SkillsShowcase>
+
+          <SkillsShowcase
+            classNameWrapper="bg-[#B9D9FF]"
+            classNameAnimation="animate-slideRight"
           >
-            {translation()?.skillsShowcases[0]?.topic[2]?.topic}
-          </h2>
+            <Link
+              href={translation()?.skillsShowcases[3].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+            >
+              <Image
+                src={translation()?.skillsShowcases[3].image.url}
+                alt={translation()?.skillsShowcases[3].image.name}
+                width={translation()?.skillsShowcases[3].image.width}
+                height={translation()?.skillsShowcases[3].image.height}
+                className="scale-70 object-contain shadow-xl"
+              />
+            </Link>
 
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-pink-700`}
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+            >
+              {translation()?.skillsShowcases[3]?.topic[0]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+            >
+              {translation()?.skillsShowcases[3]?.topic[1]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+            >
+              {translation()?.skillsShowcases[3]?.topic[2]?.topic}
+            </h2>
+
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
+            >
+              {translation()?.skillsShowcases[3]?.topic[3]?.topic}
+            </h2>
+          </SkillsShowcase>
+
+          <SkillsShowcase
+            classNameWrapper="bg-[#B7FFB1]"
+            classNameAnimation="animate-slideRight"
           >
-            {translation()?.skillsShowcases[0]?.topic[3]?.topic}
-          </h2>
-        </SkillsShowcase>
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+            >
+              {translation()?.skillsShowcases[4]?.topic[0]?.topic}
+            </h2>
 
-        <SkillsShowcase
-          classNameWrapper="bg-[#FFF5CE]"
-          classNameAnimation="animate-slideRight"
-        >
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
-          >
-            {translation()?.skillsShowcases[1]?.topic[0]?.topic}
-          </h2>
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+            >
+              {translation()?.skillsShowcases[4]?.topic[1]?.topic}
+            </h2>
 
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
-          >
-            {translation()?.skillsShowcases[1]?.topic[1]?.topic}
-          </h2>
+            <Link
+              href={translation()?.skillsShowcases[4].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
+            >
+              <Image
+                src={translation()?.skillsShowcases[4].image.url}
+                alt={translation()?.skillsShowcases[4].image.name}
+                width={translation()?.skillsShowcases[4].image.width}
+                height={translation()?.skillsShowcases[4].image.height}
+                className="scale-75 object-contain shadow-xl"
+              />
+            </Link>
 
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
-          >
-            {translation()?.skillsShowcases[1]?.topic[2]?.topic}
-          </h2>
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+            >
+              {translation()?.skillsShowcases[4]?.topic[2]?.topic}
+            </h2>
 
-          <Link
-            href={translation()?.skillsShowcases[1].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
-          >
-            <Image
-              src={translation()?.skillsShowcases[1].image.url}
-              alt={translation()?.skillsShowcases[1].image.name}
-              width={translation()?.skillsShowcases[1].image.width}
-              height={translation()?.skillsShowcases[1].image.height}
-              className="scale-70 object-contain shadow-xl"
-            />
-          </Link>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#9C8115]`}
-          >
-            {translation()?.skillsShowcases[1]?.topic[3]?.topic}
-          </h2>
-        </SkillsShowcase>
-
-        <SkillsShowcase
-          classNameWrapper="bg-[#C0C0C0]"
-          classNameAnimation="animate-slideLeft"
-        >
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
-          >
-            {translation()?.skillsShowcases[2]?.topic[0]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
-          >
-            {translation()?.skillsShowcases[2]?.topic[1]?.topic}
-          </h2>
-
-          <Link
-            href={translation()?.skillsShowcases[2].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
-          >
-            <Image
-              src={translation()?.skillsShowcases[2].image.url}
-              alt={translation()?.skillsShowcases[2].image.name}
-              width={translation()?.skillsShowcases[2].image.width}
-              height={translation()?.skillsShowcases[2].image.height}
-              className="scale-70 object-contain shadow-xl"
-            />
-          </Link>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
-          >
-            {translation()?.skillsShowcases[2]?.topic[2]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#1C1D21]`}
-          >
-            {translation()?.skillsShowcases[2]?.topic[3]?.topic}
-          </h2>
-        </SkillsShowcase>
-
-        <SkillsShowcase
-          classNameWrapper="bg-[#B9D9FF]"
-          classNameAnimation="animate-slideRight"
-        >
-          <Link
-            href={translation()?.skillsShowcases[3].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
-          >
-            <Image
-              src={translation()?.skillsShowcases[3].image.url}
-              alt={translation()?.skillsShowcases[3].image.name}
-              width={translation()?.skillsShowcases[3].image.width}
-              height={translation()?.skillsShowcases[3].image.height}
-              className="scale-70 object-contain shadow-xl"
-            />
-          </Link>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
-          >
-            {translation()?.skillsShowcases[3]?.topic[0]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
-          >
-            {translation()?.skillsShowcases[3]?.topic[1]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
-          >
-            {translation()?.skillsShowcases[3]?.topic[2]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#014EA8]`}
-          >
-            {translation()?.skillsShowcases[3]?.topic[3]?.topic}
-          </h2>
-        </SkillsShowcase>
-
-        <SkillsShowcase
-          classNameWrapper="bg-[#B7FFB1]"
-          classNameAnimation="animate-slideRight"
-        >
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
-          >
-            {translation()?.skillsShowcases[4]?.topic[0]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
-          >
-            {translation()?.skillsShowcases[4]?.topic[1]?.topic}
-          </h2>
-
-          <Link
-            href={translation()?.skillsShowcases[4].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform rotate-[-10deg] transition-all duration-500 ease-in-out hover:rotate-0 hover:scale-105 cursor-pointer"
-          >
-            <Image
-              src={translation()?.skillsShowcases[4].image.url}
-              alt={translation()?.skillsShowcases[4].image.name}
-              width={translation()?.skillsShowcases[4].image.width}
-              height={translation()?.skillsShowcases[4].image.height}
-              className="scale-75 object-contain shadow-xl"
-            />
-          </Link>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
-          >
-            {translation()?.skillsShowcases[4]?.topic[2]?.topic}
-          </h2>
-
-          <h2
-            className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
-          >
-            {translation()?.skillsShowcases[4]?.topic[3]?.topic}
-          </h2>
-        </SkillsShowcase>
-      </div>
-
-      <div className="py-12 space-y-6">
-        <PortfolioGrid galleries={translation()?.projectGalleries} />
-      </div>
-
-      <div className="py-12 px-6 space-y-6">
-        <div
-          id="formation"
-          className="container mx-auto flex flex-col gap-20 justify-center md:flex-row md:gap-30"
-        >
-          <Experience
-            title={translation()?.experienceSections[0].title}
-            subtitle={translation()?.experienceSections[0].subtitle}
-            description={translation()?.experienceSections[0].description}
-            items={translation()?.experienceSections[0].items}
-          />
-
-          <Education
-            title={translation()?.educationSections[0].title}
-            items={translation()?.educationSections[0].items}
-            language={translation()?.languageSkills[0]}
-          />
+            <h2
+              className={`text-6xl text-nowrap font-imbue tracking-widest text-[#0A6C02]`}
+            >
+              {translation()?.skillsShowcases[4]?.topic[3]?.topic}
+            </h2>
+          </SkillsShowcase>
         </div>
-      </div>
 
-      <div className="py-12 px-6">
-        <div className="container mx-auto">
-          <FindMe
-            title={translation()?.contactLinks[0].title}
-            contacts={translation()?.contactLinks[0].contacts}
-          />
+        <div className="py-12 space-y-6">
+          <PortfolioGrid galleries={translation()?.projectGalleries} />
+        </div>
+
+        <div className="py-12 px-6 space-y-6">
+          <div
+            id="formation"
+            className="container mx-auto flex flex-col gap-20 justify-center md:flex-row md:gap-30"
+          >
+            <Experience
+              title={translation()?.experienceSections[0].title}
+              subtitle={translation()?.experienceSections[0].subtitle}
+              description={translation()?.experienceSections[0].description}
+              items={translation()?.experienceSections[0].items}
+            />
+
+            <Education
+              title={translation()?.educationSections[0].title}
+              items={translation()?.educationSections[0].items}
+              language={translation()?.languageSkills[0]}
+            />
+          </div>
+        </div>
+
+        <div className="py-12 px-6">
+          <div className="container mx-auto">
+            <FindMe
+              title={translation()?.contactLinks[0].title}
+              contacts={translation()?.contactLinks[0].contacts}
+            />
+          </div>
         </div>
       </div>
     </div>
