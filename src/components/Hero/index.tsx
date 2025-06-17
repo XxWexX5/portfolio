@@ -109,8 +109,10 @@ export function Hero({ title, description }: HeroProps) {
           </div>
 
           <div className="absolute top-[15%] bottom-0 -left-[30.5%] rotate-270 m-auto flex flex-col justify-center">
-            <h1 className="font-yeseva text-3xl">Front End</h1>
-            <h2 className="font-yeseva text-7xl uppercase">Developer</h2>
+            <h1 className="font-yeseva text-lg md:text-3xl">Front End</h1>
+            <h2 className="font-yeseva text-2xl md:text-7xl uppercase">
+              Developer
+            </h2>
           </div>
         </div>
       </div>
