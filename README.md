@@ -1,4 +1,5 @@
 # 🧑‍💻 Portfólio Profissional — Wevison Ramalho
+
 ![image](https://github.com/user-attachments/assets/8ec1a935-8751-40a8-852e-9786df6ea3f2)
 
 Este é o repositório do meu portfólio como Desenvolvedor Front-End e Designer de UI/UX. Reuni aqui meus principais projetos, experiências e habilidades, apresentados com uma interface moderna, acessível e responsiva.
@@ -11,10 +12,10 @@ Este portfólio foi desenvolvido com tecnologias modernas, tanto no front-end qu
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Next.js** – Framework React com foco em performance e renderização híbrida
-- **Tailwind CSS** – Utilitário CSS para estilização moderna e responsiva
-- **GraphQL** – Comunicação flexível e eficiente com a API
-- **Strapi CMS** – Gerenciamento de conteúdo headless, facilitando atualizações e escalabilidade
+- **Next.js** – Framework React com foco em performance e renderização híbrida;
+- **Tailwind CSS** – Utilitário CSS para estilização moderna e responsiva;
+- **GraphQL** – Comunicação flexível e eficiente com a API;
+- **Strapi CMS** – Gerenciamento de conteúdo headless, facilitando atualizações e escalabilidade;
 
 ## 🚀 Funcionalidades
 
