@@ -119,7 +119,7 @@ export default function Home({ data, dataPTbr }: any) {
           </div>
         </div>
 
-        <div className="py-12 space-y-6">
+        <div className="py-12 space-y-6 w-full overflow-hidden">
           <SkillsShowcase
             classNameWrapper="bg-pink-200"
             classNameAnimation="animate-slideLeft"
