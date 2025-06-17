@@ -25,7 +25,7 @@ interface PortfolioGridProps {
 
 export default function PortfolioGrid({ galleries }: PortfolioGridProps) {
   return (
-    <div className="grid grid-cols-1 grid-rows-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 grid-rows-1 sm:grid-rows-2 sm:grid-cols-2 md:grid-rows-3 lg:grid-cols-3">
       {galleries.map(({ gallery }, index) => {
         return (
           <div key={index} className="overflow-hidden">
