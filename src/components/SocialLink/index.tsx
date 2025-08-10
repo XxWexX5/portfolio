@@ -35,11 +35,12 @@ export function SocialLink({ link, image }: SocialLinkProps) {
       rel="noopener noreferrer"
       className="flex items-center gap-6 text-primary-500 hover:underline mx-auto lg:mx-0 overflow-hidden"
     >
-      <div className="size-12 relative">
+      <div className="w-12 h-12 flex-shrink-0">
         <Image
           src={image.src}
           alt={image.alt}
-          fill
+          width={48}
+          height={48}
           className="w-full h-full object-contain"
         />
       </div>
