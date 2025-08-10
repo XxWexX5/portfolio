@@ -141,7 +141,7 @@ export default function Home({ data, dataPTbr }: any) {
                 alt={translation()?.skillsShowcases[0].image.name}
                 width={translation()?.skillsShowcases[0].image.width}
                 height={translation()?.skillsShowcases[0].image.height}
-                className="w-auto h-auto max-w-[300px] md:max-w-[300px] lg:max-w-[300px] object-contain shadow-xl"
+                className="w-auto h-auto max-w-[230px] md:max-w-[230px] lg:max-w-[230px] object-contain shadow-xl"
               />
             </Link>
 
@@ -197,7 +197,7 @@ export default function Home({ data, dataPTbr }: any) {
                 alt={translation()?.skillsShowcases[1].image.name}
                 width={translation()?.skillsShowcases[1].image.width}
                 height={translation()?.skillsShowcases[1].image.height}
-                className="w-auto h-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px] object-contain shadow-xl"
+                className="w-auto h-auto max-w-[200px] md:max-w-[230px] lg:max-w-[230px] object-contain shadow-xl"
               />
             </Link>
 
@@ -235,7 +235,7 @@ export default function Home({ data, dataPTbr }: any) {
                 alt={translation()?.skillsShowcases[2].image.name}
                 width={translation()?.skillsShowcases[2].image.width}
                 height={translation()?.skillsShowcases[2].image.height}
-                className="w-auto h-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px] object-contain shadow-xl"
+                className="w-auto h-auto max-w-[200px] md:max-w-[230px] lg:max-w-[230px] object-contain shadow-xl"
               />
             </Link>
 
@@ -267,7 +267,7 @@ export default function Home({ data, dataPTbr }: any) {
                 alt={translation()?.skillsShowcases[3].image.name}
                 width={translation()?.skillsShowcases[3].image.width}
                 height={translation()?.skillsShowcases[3].image.height}
-                className="w-auto h-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px] object-contain shadow-xl"
+                className="w-auto h-auto max-w-[200px] md:max-w-[230px] lg:max-w-[230px] object-contain shadow-xl"
               />
             </Link>
 
@@ -323,7 +323,7 @@ export default function Home({ data, dataPTbr }: any) {
                 alt={translation()?.skillsShowcases[4].image.name}
                 width={translation()?.skillsShowcases[4].image.width}
                 height={translation()?.skillsShowcases[4].image.height}
-                className="w-auto h-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px] object-contain shadow-xl"
+                className="w-auto h-auto max-w-[200px] md:max-w-[230px] lg:max-w-[230px] object-contain shadow-xl"
               />
             </Link>
 
