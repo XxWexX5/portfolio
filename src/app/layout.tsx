@@ -29,8 +29,31 @@ const ImbueSans = Imbue({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio by Wevison R.",
+  title: "Wevison R. - Desenvolvedor Front-end | Portfolio",
+  description: "Portfolio profissional de Wevison R., desenvolvedor Front-end especializado em React, Next.js, TypeScript e tecnologias modernas. Confira meus projetos e experiências.",
+  keywords: ["desenvolvedor", "front-end", "React", "Next.js", "TypeScript", "portfolio", "programador", "frontend", "backend"],
+  authors: [{ name: "Wevison R." }],
+  creator: "Wevison R.",
+  publisher: "Wevison R.",
+  robots: "index, follow",
+  openGraph: {
+    title: "Wevison R. - Desenvolvedor Front-end | Portfolio",
+    description: "Portfolio profissional de Wevison R., desenvolvedor Front-end especializado em React, Next.js, TypeScript e tecnologias modernas.",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Portfolio Wevison R.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wevison R. - Desenvolvedor Front-end | Portfolio",
+    description: "Portfolio profissional de Wevison R., desenvolvedor Front-end especializado em React, Next.js, TypeScript e tecnologias modernas.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
