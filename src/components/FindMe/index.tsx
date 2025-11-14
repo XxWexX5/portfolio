@@ -28,7 +28,7 @@ export function FindMe({ title, contacts }: FindMeProps) {
         {title}
       </h2>
 
-      <div className="grid grid-cols-3 space-y-8 md:grid-cols-3">
+      <div className="grid grid-cols-3 gap-8 gap-x-24 md:grid-cols-2">
         {contacts.map((contact) => (
           <SocialLink
             key={contact.id}

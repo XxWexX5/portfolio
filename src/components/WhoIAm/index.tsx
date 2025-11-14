@@ -24,7 +24,7 @@ export function WhoIAm({
 }: WhoIAmProps) {
   return (
     <div id="work">
-      <div className="space-y-4 w-full">
+      <div className="space-y-4 w-fit">
         <div className="flex flex-col -space-y-1 max-w-[28rem]">
           <h2 className="text-primary-500 font-light text-xl">{preTitle}</h2>
           <h3 className="text-primary-500 font-medium text-6xl">{title}</h3>

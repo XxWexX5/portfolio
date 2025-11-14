@@ -1,0 +1,16 @@
+{
+  "name": "Wevison R. - Portfolio",
+  "short_name": "Portfolio WR",
+  "description": "Portfolio profissional de Wevison R., desenvolvedor Front-end.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
