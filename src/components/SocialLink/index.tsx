@@ -44,7 +44,7 @@ export function SocialLink({ link, image }: SocialLinkProps) {
         />
       </div>
 
-      <span className="hidden text-xl xl:block lg:text-2xl">{link.text}</span>
+      <span className="hidden text-xl lg:block lg:text-2xl">{link.text}</span>
     </Link>
   );
 }
